@@ -220,7 +220,7 @@ class PigeonBuildHandler {
 
   String? combinePackage(String? package, String? basePackage) {
     if (package == null) {
-      return null;
+      return basePackage;
     }
 
     if (package.startsWith('.') && basePackage != null) {
