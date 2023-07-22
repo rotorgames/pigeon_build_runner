@@ -3,7 +3,8 @@ description: Seamlessly integrate 'pigeon' with 'build_runner' for efficient cod
 homepage: https://github.com/rotorgames/pigeon_build_runner
 repository: https://github.com/rotorgames/pigeon_build_runner/tree/main/packages/pigeon_build_core
 issue_tracker: https://github.com/rotorgames/pigeon_build_runner/issues
-version: 1.0.0
+documentation: https://github.com/rotorgames/pigeon_build_runner/blob/main/packages/pigeon_build_runner/README.md
+version: 1.0.1
 
 environment:
   sdk: '>=2.18.4 <4.0.0'
