@@ -13,10 +13,11 @@ dependencies:
     sdk: flutter
 
 dev_dependencies:
+  pigeon: ^<latest_pigeon_version>
   build_runner: ^<latest_build_runner_version>
   pigeon_build_runner: ^<latest_pigeon_build_runner_version>
 ```
-Make sure to replace <latest_build_runner_version>, and <latest_pigeon_build_runner_version> with the most recent versions available. You can find the latest versions on [pub.dev](https://pub.dev).
+Make sure to replace <latest_pigeon_version>, <latest_build_runner_version>, and <latest_pigeon_build_runner_version> with the most recent versions available. You can find the latest versions on [pub.dev](https://pub.dev).
 
 #### 2. Include a pigeon folder
 If you have your pigeon files placed outside the lib folder in your Dart project, you will need to create a `build.yaml` file to configure the build system properly. This step is necessary to generate the necessary code from your pigeon files.
@@ -34,10 +35,10 @@ Here's how you can do it:
 ```yaml
 additional_public_assets:
     # Add the directories containing your pigeon files here, relative to the root directory
-    - path/to/your/pigeon/directory
+    - path/to/pigeons/directory/**
 ```
 
-Replace `path/to/your/pigeon/directory` with the actual relative path to the directory where your pigeon files are located. Make sure to indent the lines properly as shown in the example.
+Replace `path/to/pigeons/directory` with the actual relative path to the directory where your pigeon files are located. Make sure to indent the lines properly as shown in the example.
 
 #### 3. Configure your project
 
