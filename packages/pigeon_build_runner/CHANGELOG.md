@@ -1,3 +1,7 @@
+## 1.0.4
+
+- Updates description.
+
 ## 1.0.3
 
 - Fixes issue with default package name.
