@@ -6,7 +6,6 @@ environment:
   sdk: '>=2.18.4 <4.0.0'
 
 pigeon:
-  enabled: true
   main-input:
     copyright-header: pigeons/copyright.txt
     one-language: true

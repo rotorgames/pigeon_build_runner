@@ -11,7 +11,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  pigeon_build_runner: ^1.0.0
   path: ^1.8.3
 
 dependency_overrides: 
@@ -23,6 +22,7 @@ dependency_overrides:
     path: ../../pigeon_build_config
 
 dev_dependencies:
+  pigeon_build_runner: ^1.0.0
   pigeon: ^10.0.0
   build_runner: ^2.4.4
   lints: ^2.0.0
@@ -30,12 +30,12 @@ dev_dependencies:
 
 pigeon:
   main-input:
-    input: pigeons
+    input: pigeons/
     dart:
-      out: out/lib/pigeons
-      test-out: out/test/pigeons
+      out: out/dart
+      test-out: out/test/
     ast:
-      out: out/lib/ast
+      out: out/ast
     objc:
       header-out: out/objc
       source-out: out/objc
@@ -52,4 +52,26 @@ pigeon:
       header-out: out/cpp
       source-out: out/cpp
       namespace: CppNamespace
-      
+  inputs:
+    - input: example_file.dart
+      dart:
+        out: example_file.dart
+        test-out: example_file.dart
+      ast:
+        out: example_file.dart
+      objc:
+        header-out: ExampleFile.h
+        source-out: ExampleFile.m
+        prefix: example
+      java:
+        out: ExampleFile.java
+        package: .examples
+      swift:
+        out: ExampleFile.swift
+      kotlin:
+        out: ExampleFile.kt
+        package: .example
+      cpp:
+        header-out: example_file.h
+        source-out: example_file.cpp
+        namespace: NewNamespace

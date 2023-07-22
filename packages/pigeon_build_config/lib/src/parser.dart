@@ -27,4 +27,26 @@ class PigeonBuildPubspecParser {
 
     return config.pigeon;
   }
+
+  static Future<PigeonBuildConfig?> parsePigeonConfigFile(File file) async {
+    final fileContent = await file.readAsString();
+
+    return parsePigeonConfig(fileContent, file.uri);
+  }
+
+  static PigeonBuildConfig? parsePigeonConfigFileSync(File file) {
+    final fileContent = file.readAsStringSync();
+
+    return parsePigeonConfig(fileContent, file.uri);
+  }
+
+  static PigeonBuildConfig? parsePigeonConfig(String content, Uri path) {
+    final config = checkedYamlDecode(
+      content,
+      (m) => PigeonBuildConfig.fromJson(m!),
+      sourceUrl: path,
+    );
+
+    return config;
+  }
 }

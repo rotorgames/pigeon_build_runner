@@ -2,16 +2,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'config.g.dart';
 
-enum PigeonBuildFileCase {
-  snake,
-  param,
-  pascale,
-  header,
-  title,
-  camel,
-  sentence,
-}
-
 @JsonSerializable(
   checked: true,
   anyMap: true,
@@ -20,15 +10,9 @@ enum PigeonBuildFileCase {
 class PigeonBuildOutputConfig {
   @JsonKey(name: 'path')
   final String path;
-  @JsonKey(name: 'name-case')
-  final PigeonBuildFileCase? nameCase;
-  @JsonKey(name: 'extension')
-  final String? extension;
 
   PigeonBuildOutputConfig({
     required this.path,
-    this.nameCase,
-    this.extension,
   });
 
   factory PigeonBuildOutputConfig.fromJson(dynamic json) {
@@ -67,15 +51,12 @@ class PigeonBuildPubspecConfig {
   disallowUnrecognizedKeys: true,
 )
 class PigeonBuildConfig {
-  @JsonKey(name: 'enabled')
-  final bool enabled;
   @JsonKey(name: 'main-input')
   final PigeonBuildInputConfig? mainInput;
   @JsonKey(name: 'inputs')
   final List<PigeonBuildInputConfig> inputs;
 
   PigeonBuildConfig({
-    this.enabled = false,
     this.mainInput,
     this.inputs = const <PigeonBuildInputConfig>[],
   });

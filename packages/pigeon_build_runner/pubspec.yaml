@@ -11,7 +11,9 @@ dependencies:
   pigeon_build_config: ^1.0.0
   pigeon_build_core: ^1.0.0
   build: ^2.4.0
-  glob: ^2.1.2
+  pigeon: ^10.0.0
+  scratch_space: ^1.0.0
+  path: ^1.8.3
 
 dependency_overrides: 
   pigeon_build_core: 

@@ -41,6 +41,20 @@ class BasePathIsNotDirectoryException extends PathExceptionBase {
   String getErrorText() => 'All paths in main input should be a directory';
 }
 
+class InputPathIsNotFileException extends PathExceptionBase {
+  InputPathIsNotFileException(super.path, super.field, [super.generator]);
+
+  @override
+  String getErrorText() => 'Input path should be a file';
+}
+
+class OutputPathIsNotFileException extends PathExceptionBase {
+  OutputPathIsNotFileException(super.path, super.field, [super.generator]);
+
+  @override
+  String getErrorText() => 'Output path should be a file';
+}
+
 class MissingJavaOrKotlinBasePackageException extends GeneratorExceptionBase {
   final String package;
 

@@ -1,4 +1,8 @@
 library pigeon_build_core;
 
-//TODO add more exports
-export 'src/build_generator.dart' show PigeonBuildGenerator;
+export 'src/models//build_handler_result.dart';
+export 'src/implementations/build_handler.dart';
+export 'src/validation/validation_errors.dart';
+export 'src/extensions/pigeon_options_extension.dart'
+    show PigeonOptionsExtension;
+export 'src/validation/config_validator.dart';

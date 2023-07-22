@@ -13,32 +13,16 @@ PigeonBuildOutputConfig _$PigeonBuildOutputConfigFromJson(Map json) =>
       ($checkedConvert) {
         final val = PigeonBuildOutputConfig(
           path: $checkedConvert('path', (v) => v as String),
-          nameCase: $checkedConvert('name-case',
-              (v) => $enumDecodeNullable(_$PigeonBuildFileCaseEnumMap, v)),
-          extension: $checkedConvert('extension', (v) => v as String?),
         );
         return val;
       },
-      fieldKeyMap: const {'nameCase': 'name-case'},
     );
 
 Map<String, dynamic> _$PigeonBuildOutputConfigToJson(
         PigeonBuildOutputConfig instance) =>
     <String, dynamic>{
       'path': instance.path,
-      'name-case': _$PigeonBuildFileCaseEnumMap[instance.nameCase],
-      'extension': instance.extension,
     };
-
-const _$PigeonBuildFileCaseEnumMap = {
-  PigeonBuildFileCase.snake: 'snake',
-  PigeonBuildFileCase.param: 'param',
-  PigeonBuildFileCase.pascale: 'pascale',
-  PigeonBuildFileCase.header: 'header',
-  PigeonBuildFileCase.title: 'title',
-  PigeonBuildFileCase.camel: 'camel',
-  PigeonBuildFileCase.sentence: 'sentence',
-};
 
 PigeonBuildPubspecConfig _$PigeonBuildPubspecConfigFromJson(Map json) =>
     $checkedCreate(
@@ -65,10 +49,9 @@ PigeonBuildConfig _$PigeonBuildConfigFromJson(Map json) => $checkedCreate(
       ($checkedConvert) {
         $checkKeys(
           json,
-          allowedKeys: const ['enabled', 'main-input', 'inputs'],
+          allowedKeys: const ['main-input', 'inputs'],
         );
         final val = PigeonBuildConfig(
-          enabled: $checkedConvert('enabled', (v) => v as bool? ?? false),
           mainInput: $checkedConvert(
               'main-input',
               (v) =>
@@ -88,7 +71,6 @@ PigeonBuildConfig _$PigeonBuildConfigFromJson(Map json) => $checkedCreate(
 
 Map<String, dynamic> _$PigeonBuildConfigToJson(PigeonBuildConfig instance) =>
     <String, dynamic>{
-      'enabled': instance.enabled,
       'main-input': instance.mainInput,
       'inputs': instance.inputs,
     };
