@@ -1,12 +1,12 @@
 name: pigeon_build_runner
-description: A starting point for Dart libraries or applications.
-version: 1.0.0
-# repository: https://github.com/my_org/my_repo
+description: Seamlessly integrate 'pigeon' with 'build_runner' for efficient code generation and streamlined development.
+homepage: https://github.com/rotorgames/pigeon_build_runner
+repository: https://github.com/rotorgames/pigeon_build_runner/tree/main/packages/pigeon_build_core
+issue_tracker: https://github.com/rotorgames/pigeon_build_runner/issues
 
 environment:
-  sdk: ^3.0.0
+  sdk: '>=2.18.4 <4.0.0'
 
-# Add regular dependencies here.
 dependencies:
   pigeon_build_config: ^1.0.0
   pigeon_build_core: ^1.0.0
