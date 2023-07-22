@@ -1,0 +1,55 @@
+name: pigeon_build_runner_example
+description: A starting point for Dart libraries or applications.
+version: 1.0.0
+# repository: https://github.com/my_org/my_repo
+
+environment:
+  sdk: '^3.0.0'
+  flutter: ">=3.10.0"
+
+# Add regular dependencies here.
+dependencies:
+  flutter:
+    sdk: flutter
+  pigeon_build_runner: ^1.0.0
+  path: ^1.8.3
+
+dependency_overrides: 
+  pigeon_build_runner: 
+    path: ../
+  pigeon_build_core: 
+    path: ../../pigeon_build_core
+  pigeon_build_config: 
+    path: ../../pigeon_build_config
+
+dev_dependencies:
+  pigeon: ^10.0.0
+  build_runner: ^2.4.4
+  lints: ^2.0.0
+  test: ^1.21.0
+
+pigeon:
+  main-input:
+    input: pigeons
+    dart:
+      out: out/lib/pigeons
+      test-out: out/test/pigeons
+    ast:
+      out: out/lib/ast
+    objc:
+      header-out: out/objc
+      source-out: out/objc
+      prefix: example
+    java:
+      out: out/java
+      package: dev.flutter.pigeon_example_app
+    swift:
+      out: out/swift
+    kotlin:
+      out: out/kotlin
+      package: dev.flutter.pigeon_example_app
+    cpp:
+      header-out: out/cpp
+      source-out: out/cpp
+      namespace: CppNamespace
+      

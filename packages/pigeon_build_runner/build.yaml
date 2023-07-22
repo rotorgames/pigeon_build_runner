@@ -1,0 +1,10 @@
+builders:
+  buld_runner_assets_test:
+    import: "package:pigeon_build_runner/pigeon_build_runner.dart"
+    builder_factories: [ "build" ]
+    build_extensions: 
+      { 
+        'pubspec.yaml': ['.$pigeonyaml'],
+        ".dart": [".$pigeon"] 
+      }
+    auto_apply: dependents

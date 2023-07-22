@@ -1,0 +1,13 @@
+name: pigeon_build_config
+description: A starting point for Dart libraries or applications.
+version: 1.0.0
+
+pigeon:
+  main-input:
+    input: pigeon/\\test.dart
+    dart:
+      out: lib/test.dart
+  inputs:
+    - input: pigeon/test.dart
+      dart:
+        out: pigeon/test.dart

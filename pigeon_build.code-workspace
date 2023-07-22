@@ -1,0 +1,46 @@
+{
+	"folders": [
+		{
+			"path": "packages/pigeon_build_config"
+		},
+		{
+			"path": "packages/pigeon_build_core"
+		},
+		{
+			"path": "packages/pigeon_build_runner"
+		}
+	],
+	"settings": {
+		"explorer.fileNesting.enabled": true,
+		"explorer.fileNesting.expand": false,
+		"explorer.fileNesting.patterns": {
+			"*.dart": "$(capture).*.dart"
+		}
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Build on build_runner",
+				"program": "${workspaceFolder:pigeon_build_runner}/example/.dart_tool/build/entrypoint/build.dart",
+				"request": "launch",
+				"type": "dart",
+				"args": [
+					"build",
+					"--delete-conflicting-outputs",
+				]
+			},
+			{
+				"name": "Watch on build_runner",
+				"program": "${workspaceFolder:pigeon_build_runner}/example/.dart_tool/build/entrypoint/build.dart",
+				"request": "launch",
+				"type": "dart",
+				"args": [
+					"watch",
+					"--delete-conflicting-outputs",
+				]
+			},
+		],
+		"compounds": []
+	}
+}

@@ -1,0 +1,22 @@
+name: pigeon_build_core
+description: A starting point for Dart libraries or applications.
+version: 1.0.0
+# homepage: https://www.example.com
+
+environment:
+  sdk: '>=2.18.4 <4.0.0'
+
+dependencies:
+  path: ^1.8.2
+  meta: ^1.9.1
+  recase: ^4.1.0
+  pigeon: ^10.0.0
+  pigeon_build_config: ^1.0.0
+
+dev_dependencies:
+  lints: ^2.0.0
+  test: ^1.16.0
+
+dependency_overrides:
+  pigeon_build_config:
+    path: ../pigeon_build_config
