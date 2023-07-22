@@ -124,9 +124,9 @@ pigeon:
         out: /lib/custom_folder/second_pigeon.dart # /lib/custom_folder/second_pigeon.dart
 ```
 
-Also, if the package doesn't start with dot `.`, the package from `main-input` will not be used.
-
 ##### Package configuration
+
+Also, if the package doesn't start with dot `.`, the package from `main-input` will not be used.
 
 ```yaml
 pigeon:
@@ -148,7 +148,7 @@ pigeon:
 ```
 
 ##### All available properties
-Below is an overview of all the available properties for the pigeon_build_runner. For more detailed information about each property, you can refer to the comprehensive [pigeon documentation](https://github.com/flutter/packages/tree/main/packages/pigeon). This documentation will provide you with valuable insights into the functionality and usage of each property
+Below is an overview of all the available properties for the pigeon_build_runner package. For more detailed information about each property, you can refer to the comprehensive [pigeon documentation](https://github.com/flutter/packages/tree/main/packages/pigeon). This documentation will provide you with valuable insights into the functionality and usage of each property
 ```yaml
 pigeon:
   main-input:
