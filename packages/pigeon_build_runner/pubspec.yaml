@@ -16,12 +16,6 @@ dependencies:
   scratch_space: ^1.0.0
   path: ^1.8.3
 
-dependency_overrides: 
-  pigeon_build_core: 
-    path: ../pigeon_build_core
-  pigeon_build_config: 
-    path: ../pigeon_build_config
-
 dev_dependencies:
   lints: ^2.0.0
   test: ^1.21.0

@@ -1,0 +1,5 @@
+dependency_overrides: 
+  pigeon_build_core: 
+    path: ../pigeon_build_core
+  pigeon_build_config: 
+    path: ../pigeon_build_config
