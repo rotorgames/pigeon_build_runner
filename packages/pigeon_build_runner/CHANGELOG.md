@@ -1,3 +1,7 @@
+## 1.0.5
+
+- Addresses the issue where namespaces and prefixes were unintentionally lost from the main input when the child namespaces and prefixes were null.
+
 ## 1.0.4
 
 - Updates description.
