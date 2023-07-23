@@ -337,6 +337,58 @@ void main() {
       expect(options.cppSourceOut,
           'cpp/sources/custom_folder/custom_file_for_example.cpp');
     });
+
+    test('main input and one nested relative file input without package', () {
+      final config = PigeonBuildConfig(
+        mainInput: defaultSimpleMainConfig,
+        inputs: [
+          PigeonBuildInputConfig(
+            input: 'nested_folder/custom_file_for_example.dart',
+            java: PigeonBuildJavaInputConfig(
+              out: PigeonBuildOutputConfig(
+                path: 'nested_folder/CustomFileForExample.java',
+              ),
+            ),
+            kotlin: PigeonBuildKotlinInputConfig(
+              out: PigeonBuildOutputConfig(
+                path: 'nested_folder/CustomFileForExample.kt',
+              ),
+            ),
+            objc: PigeonBuildObjcInputConfig(
+              headerOut: PigeonBuildOutputConfig(
+                path: 'nested_folder/CustomFileForExample.h',
+              ),
+              sourceOut: PigeonBuildOutputConfig(
+                path: 'nested_folder/CustomFileForExample.m',
+              ),
+            ),
+            cpp: PigeonBuildCppInputConfig(
+              headerOut: PigeonBuildOutputConfig(
+                path: 'nested_folder/custom_file_for_example.h',
+              ),
+              sourceOut: PigeonBuildOutputConfig(
+                path: 'nested_folder/custom_file_for_example.cpp',
+              ),
+            ),
+          )
+        ],
+      );
+
+      final result = handler.handleInput(
+        config,
+        'pigeon/nested_folder/custom_file_for_example.dart',
+      );
+      final options = result.options;
+      expect(result.input, config.inputs.first);
+      expect(options, isNotNull);
+      expect(
+          options!.javaOptions?.package, defaultSimpleMainConfig.java!.package);
+      expect(options.kotlinOptions?.package,
+          defaultSimpleMainConfig.kotlin!.package);
+      expect(options.objcOptions?.prefix, defaultSimpleMainConfig.objc!.prefix);
+      expect(options.cppOptions?.namespace,
+          defaultSimpleMainConfig.cpp!.namespace);
+    });
   });
 
   group('pigeon options', () {

@@ -68,9 +68,9 @@ class PigeonBuildHandler {
       }
 
       if (input.objc != null) {
-        if (input.objc!.prefix != null) {
+        if (mainInput?.objc?.prefix != null || input.objc!.prefix != null) {
           objcOptions = ObjcOptions(
-            prefix: input.objc!.prefix,
+            prefix: input.objc?.prefix ?? mainInput!.objc!.prefix,
           );
         }
         objcHeaderOut = combineOutFilePath(
@@ -118,9 +118,11 @@ class PigeonBuildHandler {
       }
 
       if (input.cpp != null) {
-        cppOptions = CppOptions(
-          namespace: input.cpp!.namespace,
-        );
+        if (mainInput?.cpp?.namespace != null || input.cpp!.namespace != null) {
+          cppOptions = CppOptions(
+            namespace: input.cpp?.namespace ?? mainInput!.cpp!.namespace,
+          );
+        }
         cppHeaderOut = combineOutFilePath(
           out: input.cpp!.headerOut,
           baseOut: mainInput?.cpp?.headerOut,
