@@ -1,7 +1,7 @@
 name: pigeon_build_runner
 description: Seamlessly integrate pigeon with build_runner for efficient code generation and streamlined development.
 homepage: https://github.com/rotorgames/pigeon_build_runner
-repository: https://github.com/rotorgames/pigeon_build_runner/tree/main/packages/pigeon_build_core
+repository: https://github.com/rotorgames/pigeon_build_runner/tree/main/packages/pigeon_build_runner
 issue_tracker: https://github.com/rotorgames/pigeon_build_runner/issues
 documentation: https://github.com/rotorgames/pigeon_build_runner/blob/main/packages/pigeon_build_runner/README.md
 version: 1.0.4
