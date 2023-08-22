@@ -72,6 +72,8 @@ class PigeonBuildHandler {
           objcOptions = ObjcOptions(
             prefix: input.objc?.prefix ?? mainInput!.objc!.prefix,
           );
+        } else {
+          objcOptions = ObjcOptions();
         }
         objcHeaderOut = combineOutFilePath(
           out: input.objc!.headerOut,
