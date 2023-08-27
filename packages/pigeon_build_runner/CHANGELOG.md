@@ -1,4 +1,8 @@
-# 1.0.6
+## 1.0.7
+
+- Fixes mistakes in the changelog
+
+## 1.0.6
 
 - Fixes null check exception if prefix for objc and namespace for cpp are not provided
 - Updates links to a repository, docs and etc
