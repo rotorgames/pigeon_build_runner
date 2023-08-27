@@ -4,7 +4,7 @@ homepage: https://github.com/rotorgames/pigeon_build_runner
 repository: https://github.com/rotorgames/pigeon_build_runner
 issue_tracker: https://github.com/rotorgames/pigeon_build_runner/issues
 documentation: https://github.com/rotorgames/pigeon_build_runner/blob/main/README.md
-version: 1.0.6
+version: 1.0.7
 
 environment:
   sdk: '>=2.18.4 <4.0.0'
