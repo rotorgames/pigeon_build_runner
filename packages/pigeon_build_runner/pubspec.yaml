@@ -3,15 +3,15 @@ description: Seamlessly integrate pigeon with build_runner for efficient code ge
 homepage: https://github.com/rotorgames/pigeon_build_runner
 repository: https://github.com/rotorgames/pigeon_build_runner
 issue_tracker: https://github.com/rotorgames/pigeon_build_runner/issues
-version: 1.0.5
 documentation: https://github.com/rotorgames/pigeon_build_runner/blob/main/README.md
+version: 1.0.6
 
 environment:
   sdk: '>=2.18.4 <4.0.0'
 
 dependencies:
-  pigeon_build_config: ^1.0.0
-  pigeon_build_core: ^1.0.2
+  pigeon_build_config: ^1.0.1
+  pigeon_build_core: ^1.0.3
   build: ^2.4.0
   pigeon: ^10.0.0
   scratch_space: ^1.0.0
