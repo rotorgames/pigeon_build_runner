@@ -72,6 +72,9 @@ class PigeonBuildHandler {
           objcOptions = ObjcOptions(
             prefix: input.objc?.prefix ?? mainInput!.objc!.prefix,
           );
+        } else {
+          objcOptions =
+              ObjcOptions(); //TODO: Remove when this PR is merged https://github.com/flutter/packages/pull/4756
         }
         objcHeaderOut = combineOutFilePath(
           out: input.objc!.headerOut,
@@ -122,6 +125,9 @@ class PigeonBuildHandler {
           cppOptions = CppOptions(
             namespace: input.cpp?.namespace ?? mainInput!.cpp!.namespace,
           );
+        } else {
+          cppOptions =
+              CppOptions(); //TODO: Remove when this PR is merged https://github.com/flutter/packages/pull/4756
         }
         cppHeaderOut = combineOutFilePath(
           out: input.cpp!.headerOut,

@@ -391,6 +391,61 @@ void main() {
     });
   });
 
+  test(
+      'Checks if options are not null for some inputs where this behaviour is required',
+      () {
+    final config = PigeonBuildConfig(
+      inputs: [
+        PigeonBuildInputConfig(
+          input: '_.dart',
+          dart: PigeonBuildDartInputConfig(
+            out: PigeonBuildOutputConfig(
+              path: '_.dart',
+            ),
+          ),
+          java: PigeonBuildJavaInputConfig(
+            out: PigeonBuildOutputConfig(
+              path: '_.java',
+            ),
+          ),
+          kotlin: PigeonBuildKotlinInputConfig(
+            out: PigeonBuildOutputConfig(
+              path: '_.kt',
+            ),
+          ),
+          objc: PigeonBuildObjcInputConfig(
+            headerOut: PigeonBuildOutputConfig(
+              path: '_.h',
+            ),
+            sourceOut: PigeonBuildOutputConfig(
+              path: '_.m',
+            ),
+          ),
+          cpp: PigeonBuildCppInputConfig(
+            headerOut: PigeonBuildOutputConfig(
+              path: '_.h',
+            ),
+            sourceOut: PigeonBuildOutputConfig(
+              path: '_.cpp',
+            ),
+          ),
+        )
+      ],
+    );
+
+    final result = handler.handleInput(
+      config,
+      '_.dart',
+    );
+    final options = result.options;
+    expect(options, isNotNull);
+    expect(options!.dartOptions, isNull);
+    expect(options.javaOptions, isNotNull);
+    expect(options.kotlinOptions, isNotNull);
+    expect(options.objcOptions, isNotNull);
+    expect(options.cppOptions, isNotNull);
+  });
+
   group('pigeon options', () {
     test('getAllOutputs contains all outputs', () async {
       final options = PigeonOptions(
