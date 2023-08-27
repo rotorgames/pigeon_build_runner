@@ -2,8 +2,9 @@ name: pigeon_build_config
 description: A config package for pigeon_build_runner
 version: 1.0.0
 homepage: https://github.com/rotorgames/pigeon_build_runner
-repository: https://github.com/rotorgames/pigeon_build_runner/tree/main/packages/pigeon_build_config
+repository: https://github.com/rotorgames/pigeon_build_runner
 issue_tracker: https://github.com/rotorgames/pigeon_build_runner/issues
+documentation: https://github.com/rotorgames/pigeon_build_runner/blob/main/README.md
 
 environment:
   sdk: '>=2.18.4 <4.0.0'
