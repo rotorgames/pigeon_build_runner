@@ -1,3 +1,7 @@
+## 1.0.4
+
+- Allows using all pigeon version from 4.2.8
+
 ## 1.0.3
 
 - Fixes null check exception if prefix for objc and namespace for cpp are not provided

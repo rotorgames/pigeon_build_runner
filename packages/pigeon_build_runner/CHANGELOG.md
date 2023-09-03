@@ -1,3 +1,7 @@
+## 1.0.8
+
+- Allows using all pigeon version from 4.2.8
+
 ## 1.0.7
 
 - Fixes mistakes in the changelog
