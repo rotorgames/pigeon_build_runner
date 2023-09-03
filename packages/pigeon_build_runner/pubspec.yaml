@@ -13,7 +13,7 @@ dependencies:
   pigeon_build_config: ^1.0.1
   pigeon_build_core: ^1.0.3
   build: ^2.4.0
-  pigeon: ^10.0.0
+  pigeon: ">=4.2.8"
   scratch_space: ^1.0.0
   path: ^1.8.3
 

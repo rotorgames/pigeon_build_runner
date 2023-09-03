@@ -13,7 +13,7 @@ dependencies:
   path: ^1.8.2
   meta: ^1.9.1
   recase: ^4.1.0
-  pigeon: ^10.0.0
+  pigeon: ">=4.2.8"
   pigeon_build_config: ^1.0.0
 
 dev_dependencies:
