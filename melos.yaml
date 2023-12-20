@@ -1,0 +1,21 @@
+name: pigeon_build
+repository: https://github.com/rotorgames/pigeon_build_runner
+
+packages:
+  - packages/*
+
+command:
+  version:
+    linkToCommits: true
+    message: |
+      version:{new_package_versions}
+    changelogs:
+      - path: packages/pigeon_build_config/CHANGELOG.md
+        packageFilters:
+          scope: pigeon_build_*
+      - path: packages/pigeon_build_core/CHANGELOG.md
+        packageFilters:
+          scope: pigeon_build_*
+      - path: packages/pigeon_build_runner/CHANGELOG.md
+        packageFilters:
+          scope: pigeon_build_*

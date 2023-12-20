@@ -1,0 +1,6 @@
+name: pigeon_build_workspace
+
+environment:
+  sdk: '>=2.18.4 <4.0.0'
+dev_dependencies:
+  melos: ^3.4.0
