@@ -4,14 +4,14 @@ homepage: https://github.com/rotorgames/pigeon_build_runner
 repository: https://github.com/rotorgames/pigeon_build_runner
 issue_tracker: https://github.com/rotorgames/pigeon_build_runner/issues
 documentation: https://github.com/rotorgames/pigeon_build_runner/blob/main/README.md
-version: 1.0.8
+version: 1.1.0
 
 environment:
   sdk: '>=2.18.4 <4.0.0'
 
 dependencies:
-  pigeon_build_config: ^1.0.1
-  pigeon_build_core: ^1.0.4
+  pigeon_build_config: ^1.1.0
+  pigeon_build_core: ^1.1.0
   build: ^2.4.0
   pigeon: ">=4.2.8"
   scratch_space: ^1.0.0
