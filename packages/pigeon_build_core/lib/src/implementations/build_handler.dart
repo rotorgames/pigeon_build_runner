@@ -7,7 +7,7 @@ import '../../pigeon_build_core.dart';
 
 class PigeonBuildHandler {
   BuildHandlerResult handleInput(PigeonBuildConfig config, String inputPath) {
-    final nInputPath = p.normalize(inputPath);
+    final nInputPath = normalizePath(inputPath);
     final mainInput = config.mainInput;
 
     if (p.extension(nInputPath) != ".dart") {
@@ -223,7 +223,7 @@ class PigeonBuildHandler {
       result = p.join(basePath, path);
     }
 
-    return p.normalize(result);
+    return normalizePath(result);
   }
 
   String? combinePackage(String? package, String? basePackage) {
@@ -236,5 +236,9 @@ class PigeonBuildHandler {
     }
 
     return package;
+  }
+
+  String normalizePath(String path) {
+    return p.normalize(path).replaceAll('\\', '/');
   }
 }
