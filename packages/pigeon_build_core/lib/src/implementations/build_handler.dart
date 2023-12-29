@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:path/path.dart' as p;
 import 'package:pigeon/pigeon.dart';
 
@@ -6,8 +8,11 @@ import 'package:pigeon_build_config/pigeon_build_config.dart';
 import '../../pigeon_build_core.dart';
 
 class PigeonBuildHandler {
+  final p.Context pathContext =
+      p.Context(style: Platform.isWindows ? p.Style.posix : p.Style.platform);
+
   BuildHandlerResult handleInput(PigeonBuildConfig config, String inputPath) {
-    final nInputPath = normalizePath(inputPath);
+    final nInputPath = pathContext.normalize(inputPath);
     final mainInput = config.mainInput;
 
     if (p.extension(nInputPath) != ".dart") {
@@ -220,10 +225,10 @@ class PigeonBuildHandler {
     } else if (isBase || basePath == null) {
       result = path;
     } else {
-      result = p.join(basePath, path);
+      result = pathContext.join(basePath, path);
     }
 
-    return normalizePath(result);
+    return pathContext.normalize(result);
   }
 
   String? combinePackage(String? package, String? basePackage) {
@@ -236,9 +241,5 @@ class PigeonBuildHandler {
     }
 
     return package;
-  }
-
-  String normalizePath(String path) {
-    return p.normalize(path).replaceAll('\\', '/');
   }
 }
