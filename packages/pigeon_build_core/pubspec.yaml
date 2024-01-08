@@ -1,6 +1,6 @@
 name: pigeon_build_core
 description: A core package for pigeon_build_runner
-version: 1.1.0
+version: 1.1.1
 homepage: https://github.com/rotorgames/pigeon_build_runner
 repository: https://github.com/rotorgames/pigeon_build_runner
 issue_tracker: https://github.com/rotorgames/pigeon_build_runner/issues

@@ -2,6 +2,34 @@
 
 
 
+## 2024-01-08
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`pigeon_build_core` - `v1.1.1`](#pigeon_build_core---v111)
+ - [`pigeon_build_runner` - `v1.1.1`](#pigeon_build_runner---v111)
+
+Packages with dependency updates only:
+
+> Packages listed below depend on other packages in this workspace that have had changes. Their versions have been incremented to bump the minimum dependency versions of the packages they depend upon in this project.
+
+ - `pigeon_build_runner` - `v1.1.1`
+
+---
+
+#### `pigeon_build_core` - `v1.1.1`
+
+ - fix: normalize path separators to use forward slash
+
+
 ## 2023-12-21
 
 ### Changes
